@@ -1,0 +1,52 @@
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Bilder/Elias.jpg");
+
+    height: 100%;
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    margin-top: 0;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    margin-top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:whitesmoke;
+}
+
+.hero-text h1 {
+    letter-spacing: 10px;
+}
+
+.hero-text a {
+    background-color:#BC4B51;
+    border: none;
+    color: whitesmoke;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+}
+
+.hero-text a:hover, .hero-text a:focus {
+    box-shadow: 0 0.7em 0.5em -0.1em #BC4B51;
+    background-color:#e0757a;
+    transform: scale(105%);
+}
+
+.hero-image a:active {
+    transition: none;
+    background-color:#221E2C;
+}

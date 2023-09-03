@@ -1,0 +1,221 @@
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/1f667fab9f.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="icon" href="Bilder/Portfolio Icon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nav-style.css">
+        <link rel="stylesheet" href="hero-style.css">
+        <link rel="stylesheet" href="abt-me-style.css">
+        <link rel="stylesheet" href="projects-style.css">
+        <link rel="stylesheet" href="contact-style.css">
+
+        <title>Elias Wirström</title>
+    </head>
+    <body>
+      <navbar class="navbar" id="navbar">
+        <a href="/" class="nav-logo"><img src="Bilder/Portfolio Logo.png" alt="20elan"></a>
+        <div class="navbar-links" id="navbar-links">
+          <a href="#about-me">Om Mig</a>
+          <a href="#projects">Projekt</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+        <a href="javascript:void(0);" class="hamburger" onclick="hamburger()">
+          <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+      </navbar>
+
+      <section class="hero-image">
+        <div class="hero-text">
+          <h1>Elias Wirström</h1>
+          <p>Det här är min portfolio</p>
+          <a href=#contact>Kontakta mig</a>
+        </div>
+      </section>
+
+      <section class="about-me" id="about-me">
+          <img src="Bilder/Elias_2.jpg" alt="Bild på mig" class="about-me-img">
+          <div class="about-me-text">
+              <h1>Om Mig</h1>
+              <p>Jag heter Elias Wirström och jag är en 18-årig gymnasieelev på Stockholm Science and Innovation School (SSIS). Jag är en kreativ och driven individ men passion för konst, musik, och teknik. Jag älskar programmering och håller på för fullt att lära mig om objektorienterad programmering samt webbutveckling av olika slag!</p>
+              <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="openTab('skills')">Kunskaper</p>
+                  <p class="tab-links" onclick="openTab('experience')">Erfarenhet</p>
+                  <p class="tab-links" onclick="openTab('education')">Utbildning</p>
+              </div>
+              <div class="tab-content active-tab" id="skills">
+                  <ul>
+                      <li><span>Programmering</span><br>Kunskap inom objektorienterad programmering inom bland annat C#</li>
+                      <li><span>Webbutveckling</span><br>Kunskaper inom HTML och CSS samt lite kunskap inom Javascript</li>
+                      <li><span>Grafisk Design</span><br>Kunskaper om gränsnitt samt erfarenhet inom Figma och Illustrator</li>
+                  </ul>
+              </div>
+              <div class="tab-content" id="experience">
+                  <ul>
+                      <li><span>2022 - Nu</span><br>Ledare på Hello World!</li>
+                      <li><span>2022 - Nu</span><br>Utvecklare på UF-företaget Studyvate</li>
+                      <li><span>2019 - 2022</span><br>Deltagare på Ung Omsorg</li>
+                  </ul>
+              </div>
+              <div class="tab-content" id="education">
+                  <ul>
+                      <li><span>2020 - 2023</span><br>Informations och medieteknik på SSIS</li>
+                      <li><span>2020</span><br>Cisco IT-Essentials</li>
+                  </ul>
+              </div>
+          </div>
+        </section>
+
+        <section class="projects" id="projects">
+          <h1>Projekt</h1>
+
+          <div class="projects-cards-container">
+            <div class="projects-card">
+              <div class="projects-card-image">
+                <img src="Bilder/Frame 176.svg" alt="">
+              </div>
+              <div class="projects-card-content">
+                <div class="projects-card-text">
+                  <h3>Studyvate</h3>
+                  <p>Arbete relaterat till UF-företaget Studyvate</p>
+                </div>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#project1">
+                  Läs mer
+                </button>
+              </div>
+            </div>
+  
+            <div class="projects-card">
+              <div class="projects-card-image">
+                <img src="Bilder/SSIS.jpg" alt="">
+              </div>
+              <div class="projects-card-content">
+                <div class="projects-card-text">
+                  <h3>Skola</h3>
+                  <p>Projekt jag har gjort under min skoltid</p>
+                </div>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#project2">
+                  Läs mer
+                </button>
+              </div>
+            </div>
+  
+            <div class="projects-card">
+              <div class="projects-card-image">
+                <img src="Bilder/rain and a cup of coffee.png" alt="">
+              </div>
+              <div class="projects-card-content">
+                <div class="projects-card-text">
+                  <h3>Konst</h3>
+                  <p>En sammanställning av mina olika bilder</p>
+                </div>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#project3">
+                  Läs mer
+                </button>
+              </div>
+            </div>
+          </div>
+          
+
+        </section>
+
+        <section class="contact" id="contact">
+          <h1>Kontakt</h1>
+
+          <div class="contact-flex">
+              <div class="contact-type contact-number" onclick="copyNumber()" tabindex="0">
+                  <i class="fa-solid fa-phone fa-3x"></i>
+                  <h1>+46723847172</h1>
+              </div>
+              <a href="mailto:20elan@stockholmscience.se">
+                  <div class="contact-type contact-mail">
+                      <h1>20elan@stockholmscience.se</h1>
+                      <i class="fa-solid fa-envelope fa-3x"></i>
+                  </div>
+              </a>
+              <a href="https://www.google.se/maps/place/Borgarfjordsgatan+6C,+164+55+Kista/@59.407516,17.9436618,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9eec5bf7828b:0x1486be247577155d!8m2!3d59.4075133!4d17.9458505" target="_blank">
+                  <div class="contact-type contact-address">
+                      <i class="fa-sharp fa-solid fa-map-location-dot fa-3x"></i>
+                      <h1>Borgarfjordsgatan 6C</h1>
+                  </div>
+              </a>
+          </div>
+        </section>
+
+      <script type="application/javascript" src="script.js"></script>
+
+      <!--Modal 1-->
+      <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="CenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h2 class="modal-title" id="ModalTitle">Studyvate</h2>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      Jag arbetar som utvecklare på UF-företaget Studyvate UF. Jag jobbar med både frontend samt lite backend. Utöver detta har jag på många andra fronter hjälpt till att driva företager frammåt. För mer information, se <a href="https://studyvate.se">studyvate.se</a>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!--Modal 2-->
+      <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="CenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h2 class="modal-title" id="ModalTitle">Skolprojekt</h2>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Jag har under min skoltid på SSIS skapat ett antal projekt inom olikaämnen, dessa inkluderar bland annat: </p>
+                      <li><a href="http://192-168-152-227.ad.ssis.nu/">Virtuell Maskin</a></li>
+                      <li><a href="https://20elan.ssis.nu/wordpress">Wordpress</a></li>
+                      <li><a href="https://20elan.ssis.nu/html_DAODAC">Uppgifter i dator- och nätverksteknik</a></li>
+                      <li>Ett spel i spelmotorn MonoGame</li>
+                      <li>Ett Bibliotekssystem</li>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!--Modal 3-->
+      <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="CenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="ModalTitle">Konst</h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Jag har under många år varit intresserat och hållt på med konst. <a href="/konst">Klicka här</a> för att se min konst</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
